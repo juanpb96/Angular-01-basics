@@ -1,0 +1,23 @@
+<p>Heroes List</p>
+
+<div *ngIf="deletedHero; else nonDeleted">
+    <h3>Deleted Hero <small>{{ deletedHero }}</small></h3>
+</div>
+
+<!-- Local reference -->
+<ng-template #nonDeleted>
+    <h3>There is no hero deleted</h3>
+</ng-template>
+
+
+<button (click)="deleteHero()">
+    Delete
+</button>
+
+<!-- *ngFor is a structural directive -->
+<ul>
+    <li *ngFor="let hero of heroes; let i = index">
+        {{ i + 1 }} - {{ hero }}
+    </li>
+</ul>
+
