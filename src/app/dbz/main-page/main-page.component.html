@@ -1,0 +1,20 @@
+<h1>DBZ</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- Send properties with values to child components -->
+        <!-- <app-characters [characters]="characters"></app-characters> -->
+
+        <!-- Using services -->
+        <app-characters></app-characters>
+    </div>
+
+    <div class="col">
+        <!-- Defining a output from a child component and activate a method in the parent -->
+        <!-- <app-add [new]="new" (onNewCharacter)="addNew( $event )"></app-add> -->
+
+        <!-- Using services -->
+        <app-add [new]="new"></app-add>
+    </div>
+</div>

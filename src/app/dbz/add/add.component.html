@@ -1,0 +1,28 @@
+<h3>Add <small>{{ new.name }}</small></h3>
+<hr>
+
+<!-- To encapsulate all the info, use $event... <form (submit)="add($event)"> -->
+<!-- When imported Forms Module we can insert the action (ngSubmit)="methodName()" -->
+<form (ngSubmit)="add()">
+    <input 
+        type="text" 
+        placeholder="Name"
+        name="name"
+        [(ngModel)]="new.name" 
+    />
+    <!-- To listen and trigger the event use [( directive )] -->
+    <!-- This is known has Two Way Data Binding -->
+
+
+    <!-- No necessary when usign TWDB [value]="new.name" (input)="changeName( $event )" -->
+
+    <input 
+        type="number" 
+        placeholder="Power"
+        name="power"
+        [(ngModel)]="new.power"
+    />
+    <button type="submit">
+        Add
+    </button>
+</form>
